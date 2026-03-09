@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Dexigi Vibez Tours</title>
+    <meta name="description" content="Experience the ultimate adventure with Dexigi Vibez Tours. We offer premium Kenya safari packages, coastal getaways, and expert corporate event planning. Explore. Vibe. Repeat.">
+    <meta property="og:title" content="Blog | Dexigi Vibez Tours"><meta property="og:description" content="Experience the ultimate adventure with Dexigi Vibez Tours. We offer premium Kenya safari packages, coastal getaways, and expert corporate event planning. Explore. Vibe. Repeat."><meta property="og:image" content="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200"><meta name="twitter:card" content="summary_large_image"><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#000000"><link rel="apple-touch-icon" href=""><script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Dexigi Vibez Tours", "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1600", "telephone": "254712799837", "email": "dexigivibeztoursandevents@gmail.com", "url": "https://www.dexigiexcursions.co.ke", "description": "Experience the ultimate adventure with Dexigi Vibez Tours. We offer premium Kenya safari packages, coastal getaways, and expert corporate event planning. Explore. Vibe. Repeat."}</script>
+    
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1600">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@300;400;500;700&display=swap"></noscript>
+    
+    <style>
+    :root {
+        --p: #000000; --s: #0066cc; --bg: #fbfbfd; 
+        --nav: rgba(251,251,253,0.8); --card: #ffffff;
+        --radius: 24px; --shadow: 0 4px 24px rgba(0,0,0,0.04); --border: none;
+        --h-font: 'Montserrat', sans-serif; --b-font: 'Inter', sans-serif;
+        
+        /* MANUAL OVERRIDES */
+        --txt-h: #e65100;
+        --txt-b: #475569;
+        --h1-size: 4.5rem;
+        --p-size: 1.1rem;
+        --cta-bg: #0288d1;
+        --cta-txt: #ffffff;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body { 
+        background: var(--bg); 
+        color: var(--txt-b); 
+        font-family: var(--b-font); 
+        font-size: var(--p-size); 
+        line-height: 1.8; /* Industry standard for high readability */
+        letter-spacing: 0.01em; /* Subtle air between characters */
+        overflow-x: hidden; 
+        width: 100vw; max-width: 100%;
+    }
+    
+    iframe, model-viewer { max-width: 100%; }
+    
+    h1, h2, h3, h4 { 
+        font-family: var(--h-font); 
+        color: var(--txt-h); 
+        line-height: 1.1; 
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+    }
+
+    h1 { font-size: var(--h1-size);  }
+    h2 { font-size: calc(var(--h1-size) * 0.7); }
+    h3 { font-size: 1.6rem; color: var(--txt-h); }
+
+    p { 
+        margin-bottom: 2rem; 
+        opacity: 0.9;
+        font-weight: 400;
+        text-align: justify; /* THIS MAKES THE TEXT ARRANGEMENT STRAIGHT */
+        text-justify: inter-word; /* Balances the gaps between words */
+        hyphens: auto; /* Prevents awkward gaps on mobile */
+        -webkit-hyphens: auto;
+    }
+    
+    /* 2026 ADVANCED HERO ENGINE */
+    .hero { position: relative; min-height: 95vh; overflow: hidden; display: flex; text-align: center; justify-content: center; padding-top: 120px; }
+    .carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 0; transform: scale(1.05); }
+    .carousel-slide.active { opacity: 1; transform: scale(1); }
+    .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    .hero-content { z-index: 2; position: relative; width: 100%; padding: 0 5%; max-width: 1400px; }
+    .hero h1 { color: #ffffff !important; text-shadow: 0 10px 30px rgba(0,0,0,0.5); -webkit-text-fill-color: #fff; background: none; }
+    .hero p { color: rgba(255,255,255,0.9) !important; font-size: clamp(1.2rem, 2vw, 1.4rem); max-width: 800px; margin: 0 auto 2.5rem auto; font-weight: 400; }
+    
+    /* BENTO-STYLE GRID LAYOUTS */
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
+    main section { padding: clamp(2rem, 8vw, 8rem) 0; position: relative; }
+    .section-head { text-align: center; margin-bottom: clamp(3rem, 5vw, 5rem); }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    
+    /* FIX: Added missing contact-grid */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: stretch; }
+    
+    /* 2026 CARD PHYSICS & MICRO-INTERACTIONS */
+    .card { 
+        background: var(--card); 
+        border-radius: var(--radius); 
+        border: var(--border); 
+        box-shadow: var(--shadow);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        display: flex; 
+        flex-direction: column; 
+        overflow: hidden; 
+        position: relative;
+        color: var(--txt-b) !important;
+        
+    }
+
+    /* Premium Top-Border Glow */
+    .card::before { 
+        content: ''; 
+        position: absolute; 
+        top: 0; left: 0; right: 0; 
+        height: 4px; 
+        background: linear-gradient(90deg, var(--p), var(--s)); 
+        opacity: 0; 
+        transition: 0.3s; 
+        z-index: 5;
+    }
+
+    .card:hover { 
+        transform: translateY(-10px); 
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.2); 
+    }
+
+    .card:hover::before { 
+        opacity: 1; 
+    }
+    
+    /* REFINED PRODUCT TYPOGRAPHY */
+    .card h3 { 
+        font-size: 1.35rem !important;
+        font-weight: 800; 
+        line-height: 1.2; 
+        margin-bottom: 0.4rem; 
+        color: var(--txt-h) !important;
+        letter-spacing: -0.02em;
+    }
+
+    .card-body { 
+        padding: 2rem; 
+        display: flex; 
+        flex-direction: column; 
+        flex-grow: 1; 
+    }
+
+    .card-desc { 
+        font-size: 0.95rem; 
+        line-height: 1.6;
+        opacity: 0.7; 
+        margin-bottom: 1.5rem; 
+        display: -webkit-box; 
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+        overflow: hidden; 
+        color: var(--txt-b);
+    }
+
+    .prod-img { 
+        width: 100%; 
+        height: 260px;
+        object-fit: cover; 
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+
+    .card:hover .prod-img { 
+        transform: scale(1.08); 
+    }
+    
+    /* ENTERPRISE BUTTON COMPONENTS */
+    .btn { 
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 1.2rem 2.5rem; border-radius: var(--radius); 
+        font-weight: 800; text-decoration: none; transition: all 0.3s ease; 
+        text-transform: uppercase; cursor: pointer; border: none; text-align: center;
+        font-size: 0.95rem; letter-spacing: 1.5px; position: relative; overflow: hidden;
+    }
+    .btn-primary { background: var(--p); color: #fff !important; }
+    .btn-accent { background: var(--s); color: #fff !important; }
+    .btn:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.15); box-shadow: 0 10px 25px -5px var(--p); }
+    
+    /* GLASSMORPHISM NAVIGATION */
+    nav#main-navbar { 
+        position: fixed; top: 0; width: 100%; z-index: 2000; /* FIXED: Elevated above everything */
+        background: var(--nav); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(128,128,128,0.1); padding: 1.2rem 0; transition: top 0.3s, background 0.3s; 
+    }
+    .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { text-decoration: none; font-weight: 600; color: var(--txt-h); font-size: 0.95rem; transition: 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--p); transition: 0.3s; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--p); }
+    .mobile-menu { display: none; font-size: 1.8rem; cursor: pointer; background:none; border:none; color:var(--txt-h); z-index: 2001; } /* Ensure hamburger is clickable */
+    
+    /* PREMIUM ASYMMETRICAL PRODUCT VIEW */
+    .detail-view { 
+        display: grid; 
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 6rem; 
+        align-items: start; 
+        background: var(--card); 
+        padding: 5rem; 
+        border-radius: 32px; 
+        box-shadow: var(--shadow); 
+        border: var(--border); 
+        position: relative;
+    }
+
+    .product-media-column { 
+        position: sticky; 
+        top: 150px;
+    }
+
+    .product-price-tag { 
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: rgba(5, 150, 105, 0.1);
+        color: #059669; 
+        font-size: 2rem; 
+        font-weight: 900; 
+        border-radius: 50px;
+        margin-bottom: 2rem; 
+    }
+
+    .product-info-column h1 { 
+        font-size: clamp(2.5rem, 4vw, 4.5rem); 
+        margin-bottom: 1.5rem; 
+        line-height: 1;
+    }
+
+    .product-specs-container {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: var(--txt-b);
+        opacity: 0.9;
+    }
+
+    .product-specs-container strong {
+        display: block;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        color: var(--p);
+    }
+
+    .product-meta-box { background: rgba(128,128,128,0.05); padding: 2rem; border-radius: var(--radius); margin-bottom: 2.5rem; border-left: 5px solid var(--p); }
+    .gallery-thumbs { display: flex; gap: 15px; margin-top: 20px; overflow-x: auto; padding-bottom:10px; }
+    .thumb { width: 80px; height: 80px; border-radius: var(--radius); object-fit: cover; cursor: pointer; border: 2px solid transparent; opacity: 0.6; transition: 0.3s; }
+    .thumb:hover, .thumb.active { border-color: var(--p); opacity: 1; transform: translateY(-5px); }
+    
+    /* RESPONSIVE PRICING TABLES */
+    .pricing-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; margin: 0 auto; box-shadow: var(--shadow); border-radius: var(--radius); background: var(--card); border: var(--border); }
+    .pricing-table { width: 100%; border-collapse: collapse; min-width: 800px; }
+    .pricing-table th { background: var(--p); color: white; padding: 2rem; text-align: left; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .pricing-table td { padding: 2rem; border-bottom: 1px solid rgba(128,128,128,0.1); color: var(--txt-b); font-size: 1.1rem; }
+    .pricing-table tr:hover td { background: rgba(128,128,128,0.03); }
+
+    /* MODERN FOOTER */
+    footer { background: #0f172a; color: #f8fafc; padding: 6rem 0 3rem 0; margin-top: auto; border-top: 4px solid var(--p); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; }
+    footer a { color: #94a3b8 !important; text-decoration: none; display: block; margin-bottom: 1rem; transition: 0.3s; font-size: 1.05rem; }
+    footer a:hover { color: #ffffff !important; transform: translateX(5px); }
+    .social-icon { width: 28px; height: 28px; fill: #94a3b8; transition: 0.3s; }
+    .social-icon:hover { fill: var(--p); transform: scale(1.2) translateY(-3px); }
+
+    /* ACCESSIBILITY & UTILS */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 10; position:relative; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    details { background: var(--card); border: var(--border); border-radius: var(--radius); margin-bottom: 1.5rem; padding: 1.5rem; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition:0.3s; }
+    details:hover { box-shadow: var(--shadow); transform: translateX(5px); border-left: 4px solid var(--p); }
+    details summary { font-weight: 800; font-size: 1.2rem; outline: none; }
+
+    /* SMART CART PHYSICS & OVERLAYS */
+    #cart-float { position: fixed; bottom: 100px; right: 30px; background: var(--p); color: #fff; padding: 15px 25px; border-radius: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; z-index: 1000; display: flex; align-items: center; gap: 10px; font-weight: 800; transition: 0.3s; border: 2px solid rgba(255,255,255,0.1); }
+    #cart-float:hover { transform: scale(1.05) translateY(-5px); }
+    
+    #cart-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 3000; }
+    
+    #cart-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--card); width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; padding: 2.5rem; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); z-index: 3001; border: var(--border); color: var(--txt-b); }
+    #cart-modal h3 { margin-bottom: 1.5rem; color: var(--p); font-size: 1.8rem; border-bottom: 1px solid rgba(128,128,128,0.1); padding-bottom: 1rem; }
+    
+    .cart-item { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(128,128,128,0.1); padding: 15px 0; font-size: 1.1rem; }
+    
+    .local-vault { background: rgba(128,128,128,0.05); padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; border: 1px solid rgba(128,128,128,0.1); }
+    .local-vault input { width: 100%; padding: 1rem; margin-top: 0.5rem; border-radius: 8px; border: var(--border); background: var(--bg); color: var(--txt-b); font-size: 1rem; }
+    
+    /* POPUP PHYSICS */
+    #lead-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--card); padding: 3.5rem; text-align: center; border-radius: var(--radius); z-index: 3001; box-shadow: 0 30px 60px rgba(0,0,0,0.5); width: 90%; max-width: 500px; border: var(--border); color: var(--txt-b); }
+    .close-popup { position: absolute; top: 15px; right: 20px; cursor: pointer; font-size: 2rem; opacity: 0.5; transition: 0.3s; }
+    .close-popup:hover { opacity: 1; color: var(--s); }
+
+    /* =========================================
+       2026 STRUCTURAL LAYOUT UPGRADES 
+       ========================================= */
+       
+    /* 1. ASYMMETRICAL HERO WITH FLOATING GLASS */
+    .modern-hero { position: relative; min-height: 100vh; display: flex; text-align: center; justify-content: center; padding-top: 120px; }
+    .modern-hero-bg { position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(128,128,128,0.05) 0%, transparent 50%); z-index: -1; animation: rotate 60s linear infinite; }
+    .modern-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
+    
+    .hero-badge { display: inline-block; padding: 0.5rem 1rem; background: rgba(128,128,128,0.1); border: 1px solid rgba(128,128,128,0.2); border-radius: 50px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--txt-h); text-transform: uppercase; letter-spacing: 1px; }
+    .hero-btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-outline-light { background: transparent; color: var(--txt-h) !important; border: 2px solid var(--txt-h); }
+    .btn-outline-light:hover { background: var(--txt-h); color: var(--bg) !important; }
+    
+    .modern-hero-visual { position: relative; width: 100%; height: 600px; display: flex; align-items: center; justify-content: center; }
+    .visual-frame { width: 100%; height: 100%; border-radius: 32px; overflow: hidden; position: relative; z-index: 2; box-shadow: 0 30px 60px rgba(0,0,0,0.15); border: 8px solid var(--card); }
+    .floating-element { position: absolute; border-radius: 50%; filter: blur(60px); z-index: 1; opacity: 0.6; }
+    .glow-1 { width: 300px; height: 300px; background: var(--p); top: -50px; right: -50px; }
+    .glow-2 { width: 250px; height: 250px; background: var(--s); bottom: -50px; left: -50px; }
+    
+    /* 2. FLOATING STATS RIBBON */
+    .stats-ribbon-container { margin-top: -60px; position: relative; z-index: 100; padding: 0 20px; }
+    .stats-ribbon { background: var(--card); border-radius: 24px; padding: 3rem; display: flex; justify-content: space-around; align-items: center; box-shadow: var(--shadow); border: var(--border); backdrop-filter: blur(20px); }
+    .stat-block { text-align: center; }
+    .stat-block h3 { font-size: 3.5rem; color: var(--p); margin-bottom: 0.5rem; line-height: 1; }
+    .stat-block p { font-size: 1.1rem; font-weight: 600; color: var(--txt-b); text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; margin: 0; }
+    .stat-divider { width: 2px; height: 60px; background: rgba(128,128,128,0.2); }
+
+    /* 3. BENTO-STYLE FEATURES GRID */
+    .section-subtitle { font-size: 1.2rem; color: var(--txt-b); opacity: 0.7; margin-top: 1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+    .modern-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+    .modern-feature-card { background: var(--card); padding: 3rem; border-radius: 24px; box-shadow: var(--shadow); border: var(--border); transition: 0.4s; display: flex; flex-direction: column; gap: 1.5rem; }
+    .modern-feature-card:hover { transform: translateY(-10px); border-color: var(--p); }
+    .feature-icon-wrapper { width: 64px; height: 64px; border-radius: 16px; background: rgba(128,128,128,0.05); display: flex; align-items: center; justify-content: center; color: var(--s); border: 1px solid rgba(128,128,128,0.1); }
+    .feature-content h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--txt-h); }
+    
+    /* 4. PREMIUM ABOUT SECTION */
+    .modern-about { background: rgba(128,128,128,0.02); overflow: hidden; }
+    .about-visual { position: relative; }
+    .about-main-img { width: 100%; height: 600px; object-fit: cover; border-radius: 32px; box-shadow: var(--shadow); }
+    .about-experience-badge { position: absolute; bottom: -30px; right: -30px; background: var(--p); color: #fff; padding: 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 1rem; border: 4px solid var(--card); }
+    .about-experience-badge strong { font-size: 3rem; line-height: 1; color: #fff; }
+    .about-experience-badge span { font-size: 1rem; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
+    .about-lead { font-size: 1.25rem; line-height: 1.8; opacity: 0.9; color: var(--txt-b); border-left: 4px solid var(--s); padding-left: 1.5rem; }
+    
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* LANGUAGE MODAL PHYSICS */
+    #lang-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 3000; }
+    #lang-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--card); width: 90%; max-width: 500px; padding: 3rem; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.4); z-index: 3001; border: var(--border); color: var(--txt-b); }
+    #lang-modal h3 { margin-bottom: 1.5rem; color: var(--p); font-size: 1.8rem; border-bottom: 1px solid rgba(128,128,128,0.1); padding-bottom: 1rem; text-align:center; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .lang-opt { display: flex; align-items: center; justify-content: center; width: 100%; padding: 1.2rem; border: var(--border); border-radius: 12px; cursor: pointer; font-weight: 700; transition: 0.3s; background: var(--bg); }
+    .lang-opt:hover { background: var(--p); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+    /* TOP PROMO BAR PHYSICS */
+    #top-bar { position: fixed; top: 0; left: 0; width: 100%; background: var(--s); color: #fff; text-align: center; padding: 12px; z-index: 2005; font-weight: 800; font-size: 0.95rem; letter-spacing: 1px; transition: transform 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    #top-bar a { color: #fff !important; text-decoration: none; text-underline-offset: 4px; margin-left: 10px; transition: 0.3s; }
+    #top-bar a:hover { opacity: 0.8; }
+
+    /* DARK MODE TOGGLE PHYSICS */
+    #theme-toggle { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: var(--card); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2); cursor: pointer; z-index: 1000; font-size: 1.5rem; border: var(--border); transition: 0.3s; }
+    #theme-toggle:hover { transform: scale(1.1) rotate(15deg); border-color: var(--p); }
+
+    /* VOICE SEARCH FLOATING PHYSICS */
+    #voice-btn { 
+        position: fixed; 
+        bottom: 170px;
+        right: 30px; 
+        background: var(--p); 
+        color: #fff; 
+        border-radius: 50%; 
+        width: 50px; 
+        height: 50px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 1.2rem; 
+        cursor: pointer; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+        z-index: 1000; 
+        border: 2px solid rgba(255,255,255,0.1);
+        transition: 0.3s;
+    }
+    #voice-btn:hover { transform: scale(1.1); background: var(--s); }
+
+    /* VOICE LISTENING ANIMATION */
+    .listening { 
+        animation: voice-pulse 1.5s infinite; 
+        background: var(--s) !important; 
+    }
+    
+    @keyframes voice-pulse { 
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 60, 0.4); } 
+        70% { transform: scale(1.2); box-shadow: 0 0 0 20px rgba(255, 0, 60, 0); } 
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 60, 0); } 
+    }
+
+/* --- SHARE BUTTON & ICON CONSTRAINTS --- */
+    .share-row { 
+        display: flex; 
+        gap: 12px; 
+        flex-wrap: wrap; 
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .share-btn { 
+        width: 45px !important; 
+        height: 45px !important; 
+        display: flex !important; 
+        align-items: center; 
+        justify-content: center; 
+        border-radius: 12px; 
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    /* This targets the SVGs specifically to stop them from becoming giant */
+    .share-btn svg, .share-row svg { 
+        width: 22px !important; 
+        height: 22px !important; 
+        fill: white; 
+    }
+
+    .bg-wa { background: #25D366; }
+    .bg-fb { background: #1877F2; }
+    .bg-x { background: #000000; }
+    .bg-li { background: #0A66C2; }
+    .bg-link { background: #64748b; }
+    
+
+    /* --- PRODUCT DETAIL SIZE OVERRIDES --- */
+    
+    /* 1. The Title (The Consultant Pro) */
+    .product-info-column h1 { 
+        font-size: clamp(1.8rem, 3vw, 2.5rem) !important; 
+        margin-bottom: 1rem !important;
+    }
+
+    /* 2. The Price ($499) */
+    .product-price-tag { 
+        font-size: 1.4rem !important; 
+        padding: 0.4rem 1.2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* 3. The Description Text (The Ultimate Industrial...) */
+    .product-specs-container, .product-specs-container p {
+        font-size: 1rem !important; 
+        line-height: 1.6 !important;
+        opacity: 0.8 !important;
+    }
+    
+    /* Shrink the back button too for balance */
+    .back-btn {
+        font-size: 0.75rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* ==========================================================
+       MOBILE OPTIMIZATION (THE FIX)
+       ========================================================== */
+    @media (max-width: 992px) {
+        /* Nav Menu Collapse Fixed Layering */
+        nav#main-navbar .nav-links { 
+            position: absolute; 
+            top: 100%; 
+            left: -100%; 
+            width: 100vw; 
+            height: 100dvh; 
+            background: var(--bg); flex-direction: column; padding: 3rem; 
+            transition: left 0.4s ease; align-items: center; justify-content: flex-start; 
+            gap: 2.5rem; z-index: 1999; overflow-y: auto; 
+        }
+        nav#main-navbar .nav-links.active { left: 0; }
+        .nav-links a { font-size: 1.5rem; }
+        .mobile-menu { display: block; }
+        
+        /* Grid Breakdowns */
+        .about-grid, .detail-view, .grid-3, .modern-grid-3, .contact-grid { grid-template-columns: 1fr !important; gap: 3rem; }
+        
+        /* Hero Refinements for small screens */
+        .modern-hero-grid { grid-template-columns: 1fr; text-align: center; }
+        .modern-hero-text { text-align: center; align-items: center; justify-content: center; }
+        .hero-btn-group { justify-content: center; }
+        .modern-hero-visual { height: 400px; }
+        .hero { padding-top: 100px; text-align: center; }
+        
+        /* Detail View Reset */
+        .detail-view { padding: 2rem; gap: 2rem; }
+        .product-media-column { position: relative; top: 0; margin-bottom: 2rem; }
+        
+        /* Stats Ribbon Stacking securely */
+        .stats-ribbon { flex-direction: column; padding: 2.5rem 1.5rem; gap: 2rem; }
+        .stat-divider { width: 100%; height: 2px; }
+        .stats-ribbon-container { margin-top: -30px; }
+        
+        /* Badges overlapping fixed */
+        .about-experience-badge { position: relative; bottom: 0; right: 0; margin-top: -30px; margin-left: auto; margin-right: auto; width: fit-content; z-index: 10; }
+        
+        .pricing-table th, .pricing-table td { padding: 1.2rem 1rem; font-size: 0.95rem; }
+    }
+    
+   @media (max-width: 480px) {
+         p { 
+            text-align: left; /* Optional: We usually switch back to left-align on very narrow screens to prevent 'rivers' of white space */
+            hyphens: auto; 
+        }
+        /* 1. ELIMINATE THE BLUE GAP & HORIZONTAL GLITCHES */
+        html, body { 
+            width: 100% !important; 
+            margin: 0 !important; 
+            padding: 0 !important; 
+            overflow-x: hidden !important; 
+            background: var(--bg); /* Matches background to theme to hide gaps */
+        }
+
+        .container { 
+            width: 100% !important; 
+            max-width: 100% !important; 
+            padding: 0 24px !important; /* Proper breathing room for text */
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+        }
+
+        /* 2. FOOTER SAFE ZONE (Prevents buttons from covering links) */
+        footer { 
+            padding: 4rem 0 10rem 0 !important; /* Extra bottom padding so you can scroll past the buttons */
+        }
+        .footer-grid { 
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 3rem !important; 
+            text-align: left !important;
+        }
+
+        /* 3. HERO & TEXT SCALING */
+        h1, #hero-title, .modern-hero-text h1 { 
+            font-size: 2.4rem !important; 
+            line-height: 1.1 !important; 
+            margin-bottom: 1.5rem !important;
+        }
+        
+        #hero-sub, .modern-hero-text p {
+            font-size: 1.1rem !important; 
+            opacity: 0.8;
+            margin-bottom: 2.5rem !important;
+        }
+
+        /* 4. BUTTON STACKING */
+        .hero-btn-group { 
+            display: flex; 
+            flex-direction: column !important; 
+            gap: 12px; 
+            width: 100%; 
+        }
+        .hero-btn-group .btn { width: 100% !important; }
+
+        /* 5. FLOATING BUTTON TRAFFIC CONTROL (Corner Pinning) */
+        /* We move them to 10px from the edge so they don't block the center text */
+        #wa-widget { 
+            bottom: 15px !important; 
+            right: 10px !important; 
+            scale: 0.8; 
+        }
+        #theme-toggle { 
+            bottom: 15px !important; 
+            left: 10px !important; 
+            scale: 0.8; 
+            background: rgba(255,255,255,0.9); /* Makes toggle stand out on dark footers */
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        #cart-float { 
+            bottom: 80px !important; 
+            right: 10px !important; 
+            scale: 0.8; 
+        }
+        #voice-btn { 
+            bottom: 140px !important; 
+            right: 10px !important; 
+            scale: 0.8; 
+        }
+
+        /* 6. COMPONENT FIXES */
+        .modern-hero-visual { height: 300px !important; margin-top: 2rem !important; }
+        .visual-frame { border-width: 4px !important; }
+        .stat-block h3 { font-size: 2.8rem !important; }
+        .modern-feature-card { padding: 2rem !important; }
+        
+        /* Pricing Table Mobile Fix */
+        .pricing-table { min-width: 100% !important; }
+        .pricing-table th, .pricing-table td { padding: 1rem 0.5rem !important; font-size: 0.85rem !important; }
+    }
+    </style>
+    
+    
+    <script defer>if(new Date().getHours() >= 19 || new Date().getHours() <= 6) document.body.classList.add('dark-mode');  function startVoiceSearch() { if (!('webkitSpeechRecognition' in window)) return alert('Voice search not supported in this browser.'); const rec = new webkitSpeechRecognition(); rec.lang = 'en-US'; const btn = document.getElementById('voice-btn'); btn.classList.add('listening'); rec.onresult = (e) => { const transcript = e.results[0][0].transcript.toLowerCase(); alert('Searching for: ' + transcript); document.querySelectorAll('.card').forEach(c => { c.style.display = c.innerText.toLowerCase().includes(transcript) ? 'flex' : 'none'; }); }; rec.onend = () => btn.classList.remove('listening'); rec.start(); }</script>
+</head>
+<body>
+    <main>
+        
+    
+    <nav id="main-navbar">
+        <div class="container nav-flex">
+            <a href="index.html" aria-label="Home" style="text-decoration:none;"><span style="font-weight:900; font-size:1.5rem; color:var(--p)">Dexigi Vibez Tours</span></a>
+            <div class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
+            <div class="nav-links">
+                <a href="index.html" onclick="toggleMenu()">Home</a>
+                <a href="index.html#features" onclick="toggleMenu()">Features</a>
+                
+                <a href="index.html#inventory" onclick="toggleMenu()">Store</a>
+                <a href="blog.html" onclick="toggleMenu()">Blog</a>
+                <a href="booking.html" onclick="toggleMenu()">Book Now</a>
+                <a href="#" onclick="openLangModal()" aria-label="Switch Language">🌐 ES</a>
+                <a href="contact.html" onclick="toggleMenu()">Contact</a>
+                <a href="tel:254712799837" class="btn btn-accent" style="padding:0.6rem 1.5rem; border-radius:50px;">Call Now</a>
+            </div>
+        </div>
+    </nav>
+    <div id="theme-toggle" onclick="document.body.classList.toggle('dark-mode')" aria-label="Toggle Dark Mode">🌓</div>
+    <script>
+        function toggleMenu() { document.querySelector('.nav-links').classList.remove('active'); }
+        if(false) { document.querySelector('#main-navbar').style.top = '40px'; }
+    </script>
+    
+        
+    <section class="hero" style="min-height:40vh; background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1600'); background-size: cover;">
+        <div class="container hero-content"><h1>The Travel Diary</h1><p>Tips, destination guides, and event highlights from the Dexigi team.</p></div>
+    </section>
+    <section><div class="container"><div id="blog-grid" class="grid-3">Loading Posts...</div></div></section>
+    
+    <script defer>
+    function parseCSVLine(str) { 
+        const res = []; let cur = ''; let inQuote = false; 
+        for (let i = 0; i < str.length; i++) { 
+            const c = str[i]; 
+            if (c === '"') { if (inQuote && str[i+1] === '"') { cur += '"'; i++; } else { inQuote = !inQuote; } } 
+            else if (c === ',' && !inQuote) { res.push(cur.trim()); cur = ''; } 
+            else { cur += c; } 
+        } 
+        res.push(cur.trim()); return res; 
+    } 
+    
+    function parseMarkdown(text) { 
+        if (!text) return '';
+        // Fix the literal \n string by splitting and joining with <br>
+        let clean = text.split('\\n').join('<br>').split('\n').join('<br>');
+        
+        // Handle Bold
+        let parts = clean.split('**');
+        for (let i = 1; i < parts.length; i += 2) {
+            parts[i] = '<strong>' + parts[i] + '</strong>';
+        }
+        let bolded = parts.join('');
+        
+        // Handle Bullets and Paragraphs
+        return bolded.split('<br>').map(line => {
+            let t = line.trim();
+            if (t.startsWith('* ')) {
+                return '<li style="margin-left:20px; list-style-type:disc; margin-bottom:8px;">' + t.substring(2) + '</li>';
+            }
+            return t ? '<p style="margin-bottom:15px;">' + t + '</p>' : '';
+        }).join('');
+    }
+    </script>
+    
+    <script defer>
+    async function loadBlog() { 
+        if (!'https://docs.google.com/spreadsheets/d/e/2PACX-1vRligQXBbLI64Np58eyGqYmYIjDGMSvEnb_QX14DvzlT4msfvc6RmC9wNszY8Qbe2r4hNEXqqD1zWM4/pub?output=csv') return; // LIGHTHOUSE FIX: Abort if no CSV provided
+        try { 
+            const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRligQXBbLI64Np58eyGqYmYIjDGMSvEnb_QX14DvzlT4msfvc6RmC9wNszY8Qbe2r4hNEXqqD1zWM4/pub?output=csv'); const txt = await res.text(); const lines = txt.split(/\r\n|\n/); 
+            const box = document.getElementById('blog-grid'); box.innerHTML = ''; 
+            for(let i=1; i<lines.length; i++) { 
+                const r = parseCSVLine(lines[i]); 
+                if(r.length > 4) { 
+                    box.innerHTML += `
+                    <article class="card reveal" style="display:flex; flex-direction:column; height:100%; padding:0; overflow:hidden;">
+                        <div style="width:100%; height:220px; overflow:hidden;">
+                            <img src="${r[5]}" style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" alt="${r[1]}">
+                        </div>
+                        <div style="padding: clamp(1.5rem, 5vw, 2.5rem); display:flex; flex-direction:column; flex-grow:1; background:var(--card);">
+                            <span style="display:inline-block; padding:0.4rem 1rem; background:rgba(128,128,128,0.08); color:var(--p); border-radius:50px; font-size:0.75rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; width:fit-content; border:1px solid rgba(128,128,128,0.15); margin-bottom:1rem;">${r[3]}</span>
+                            
+                            <h3 style="margin-bottom:1rem; line-height:1.3; font-size:1.4rem;">
+                                <a href="post.html?id=${r[0]}" style="color:var(--txt-h); text-decoration:none; transition:0.3s;" onmouseover="this.style.color='var(--p)'" onmouseout="this.style.color='var(--txt-h)'">${r[1]}</a>
+                            </h3>
+                            
+                            <p style="flex-grow:1; margin-bottom: 2rem; opacity:0.8; line-height:1.6; font-size:0.95rem;">${r[4]}</p>
+                            
+                            <a href="post.html?id=${r[0]}" class="btn btn-primary" style="width:100%; margin-top:auto;">Read Article</a>
+                        </div>
+                    </article>`; 
+                } 
+            } 
+        } catch(e) { console.log(e); } 
+    } 
+    window.addEventListener('load', loadBlog);
+    </script>
+    
+        
+    <footer><div class="container"><div class="footer-grid">
+    <div>
+        <h3 style="color:white; margin-bottom:1.5rem;">Dexigi Vibez Tours</h3>
+        <p style="color:rgba(255,255,255,0.7); opacity:1;">Sansora Building, Nakuru, Kenya</p>
+        <div style="margin-top:1.5rem;"><a href="https://facebook.com/dexigivibeztours" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-right:15px;" aria-label="Facebook"><svg class="social-icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://instagram.com/dexigivibeztours" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-right:15px;" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24"><path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zM7.17 2.1c-1.4 0-2.6.48-3.46 1.33c-.85.85-1.33 2.06-1.33 3.46v10.3c0 1.3.47 2.5 1.33 3.36c.86.85 2.06 1.33 3.46 1.33h9.66c1.4 0 2.6-.48 3.46-1.33c.85-.85 1.33-2.06 1.33-3.46V6.89c0-1.4-.47-2.6-1.33-3.46c-.86-.85-2.06-1.33-3.46-1.33H7.17zm11.97 3.33c.77 0 1.4.63 1.4 1.4c0 .77-.63 1.4-1.4 1.4c-.77 0-1.4-.63-1.4-1.4c0-.77.63-1.4 1.4-1.4zM12 5.76c3.39 0 6.14 2.75 6.14 6.14c0 3.39-2.75 6.14-6.14 6.14c-3.39 0-6.14-2.75-6.14-6.14c0-3.39 2.75-6.14 6.14-6.14zm0 2.1c-2.2 0-3.99 1.79-3.99 4.04c0 2.25 1.79 4.04 3.99 4.04c2.2 0 3.99-1.79 3.99-4.04c0-2.25-1.79-4.04-3.99-4.04c0-2.25-1.79-4.04-3.99-4.04c0-2.25-1.79-4.04-3.99-4.04c0-2.25-1.79-4.04-3.99-4.04z"/></svg></a><a href="www.twitter.com" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-right:15px;" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584l-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a><a href="www.linkedin.com" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-right:15px;" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1-2 2a2 2 0 0 1 2-2z"></path></svg></a><a href="www.youtube.com" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-right:15px;" aria-label="YouTube"><svg class="social-icon" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></div>
+        
+    <div style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+        <span style="color: #ffffff !important; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 5px;">Service Area</span>
+        <span style="color: rgba(255,255,255,0.85) !important; font-size: 0.95rem; line-height: 1.5; display: block;">Nakuru, Nairobi, Mombasa, Diani, Malindi, Kenya, East Africa</span>
+    </div>
+    
+    </div>
+    <div>
+        <h4 style="color:white; text-transform:uppercase;">Links</h4>
+        <a href="index.html" style="color:white!important; display:block; margin-bottom:0.5rem;">Home</a>
+        <a href="about.html" style="color:white!important; display:block; margin-bottom:0.5rem;">About</a>
+        <a href="blog.html" style="color:white!important; display:block; margin-bottom:0.5rem;">Blog</a>
+        <a href="booking.html" style="color:white!important; display:block; margin-bottom:0.5rem;">Book Now</a>
+    </div>
+    <div>
+        <h4 style="color:white; text-transform:uppercase;">Legal</h4>
+        <a href="privacy.html" style="color:white!important; display:block; margin-bottom:0.5rem;">Privacy</a>
+        <a href="terms.html" style="color:white!important; display:block; margin-bottom:0.5rem;">Terms</a>
+    </div>
+    </div><div style="border-top:1px solid rgba(255,255,255,0.1); margin-top:3rem; padding-top:2rem; text-align:center; color:rgba(255,255,255,0.5);">&copy; 2026 Dexigi Vibez Tours. Powered by Titan Engine.</div></div></footer>
+    
+        
+    <a href="https://wa.me/254712799837" target="_blank" rel="noopener noreferrer" id="wa-widget" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24m-3.53 3.16c-.13 0-.35.05-.54.26c-.19.2-.72.7-.72 1.72s.73 2.01.83 2.14c.1.13 1.44 2.19 3.48 3.07c.49.21.87.33 1.16.43c.49.16.94.13 1.29.08c.4-.06 1.21-.5 1.38-.98c.17-.48.17-.89.12-.98c-.05-.09-.18-.13-.37-.23c-.19-.1-.1.13-.1.13s-1.13-.56-1.32-.66c-.19-.1-.32-.15-.45.05c-.13.2-.51.65-.62.78c-.11.13-.23.15-.42.05c-.19-.1-.8-.3-1.53-.94c-.57-.5-1.02-1.12-1.21-1.45c-.11-.19-.01-.29.09-.38c.09-.08.19-.23.29-.34c.1-.11.13-.19.19-.32c.06-.13.03-.24-.01-.34c-.05-.1-.45-1.08-.62-1.48c-.16-.4-.36-.34-.51-.35c-.11-.01-.25-.01-.4-.01Z"/></path></svg>
+    </a>
+    <style>
+        #wa-widget { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 999; transition: transform 0.3s; }
+        #wa-widget:hover { transform: scale(1.1); }
+    </style>
+    
+        
+    <div id="cart-float" onclick="toggleCart()" style="display:none;" aria-label="Cart">🛒 <span id="cart-count">0</span></div>
+    <div id="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cart-modal">
+        <h3>Your Cart</h3><div id="cart-items" style="max-height:200px; overflow-y:auto; margin:1rem 0;"></div>
+        <div style="font-weight:bold; font-size:1.2rem; margin-bottom:1rem; text-align:right;">Total: <span id="cart-total">0.00</span></div>
+        <div class="local-vault">
+            <h4 style="font-size:0.9rem;">🔒 Fast Checkout Vault</h4>
+            <input type="text" id="vault-name" placeholder="Full Name">
+            <input type="text" id="vault-address" placeholder="Delivery Address">
+        </div>
+        <button onclick="checkoutWhatsApp()" class="btn btn-accent" style="width:100%; margin-top:1rem;">1-Click Checkout via WhatsApp</button>
+    </div>
+    <script defer>
+    let cart = JSON.parse(localStorage.getItem('titanCart')) || [];
+    document.getElementById('vault-name').value = localStorage.getItem('t_name') || ''; document.getElementById('vault-address').value = localStorage.getItem('t_addr') || '';
+    
+    function renderCart() {
+        const box = document.getElementById('cart-items'); if(!box) return; box.innerHTML = ''; let total = 0;
+        cart.forEach((item, i) => { 
+            total += parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0; 
+            box.innerHTML += `<div class="cart-item"><span>${item.name}</span><span>${item.price} <span onclick="remItem(${i})" style="color:red;cursor:pointer;">x</span></span></div>`; 
+        });
+        document.getElementById('cart-count').innerText = cart.length; 
+        document.getElementById('cart-total').innerText = total.toFixed(2);
+        document.getElementById('cart-float').style.display = cart.length > 0 ? 'flex' : 'none';
+        localStorage.setItem('titanCart', JSON.stringify(cart));
+    }
+    
+    function addToCart(name, price) { cart.push({name, price}); renderCart(); alert(name + " added!"); }
+    function remItem(i) { cart.splice(i,1); renderCart(); }
+    function toggleCart() { const m = document.getElementById('cart-modal'); m.style.display = m.style.display === 'block' ? 'none' : 'block'; document.getElementById('cart-overlay').style.display = m.style.display; }
+    
+    function checkoutWhatsApp() {
+        const n = document.getElementById('vault-name').value; const a = document.getElementById('vault-address').value;
+        localStorage.setItem('t_name', n); localStorage.setItem('t_addr', a);
+        let msg = "New Order:%0A"; let total = 0;
+        cart.forEach(i => { msg += `- ${i.name} (${i.price})%0A`; total += parseFloat(i.price.replace(/[^0-9.]/g,'')) || 0; });
+        msg += `%0ATotal: ${total.toFixed(2)}%0A`; 
+        if(n) msg += `%0ADeliver to: ${n}, ${a}`;
+        
+        msg += `%0A%0AUPI: name@upi | PayPal: https://paypal.me/yourid`;
+        
+        // LIGHTHOUSE FIX (With proper Python f-string escaping)
+        window.open(`https://wa.me/254712799837?text=${msg}`, '_blank', 'noopener,noreferrer');
+        
+        cart = []; renderCart(); toggleCart();
+    }
+    window.addEventListener('load', renderCart);
+    </script>
+    
+        
+    <div id="lang-overlay" onclick="closeLangModal()"></div>
+    <div id="lang-modal">
+        <h3 style="margin-bottom:1.5rem; border-bottom:1px solid #eee; padding-bottom:10px;">Select Language</h3>
+        <div class="lang-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+            <div onclick="switchLang('en', 0)" class="lang-opt">🇺🇸 English</div>
+            <div onclick="switchLang('es', 1)" class="lang-opt">🇪🇸 Español</div>
+            <div onclick="switchLang('fr', 2)" class="lang-opt">🇫🇷 Français</div>
+            <div onclick="switchLang('de', 3)" class="lang-opt">🇩🇪 Deutsch</div>
+            <div onclick="switchLang('hi', 4)" class="lang-opt">🇮🇳 हिन्दी</div>
+            <div onclick="switchLang('bn', 5)" class="lang-opt">🇧🇩 বাংলা</div>
+        </div>
+    </div>
+    <script defer>
+    function openLangModal() { document.getElementById('lang-modal').style.display='block'; document.getElementById('lang-overlay').style.display='block'; } 
+    function closeLangModal() { document.getElementById('lang-modal').style.display='none'; document.getElementById('lang-overlay').style.display='none'; } 
+    
+    async function switchLang(langCode, colIndex) { 
+        closeLangModal(); 
+        
+        // Save user preference
+        localStorage.setItem('titan_lang', langCode);
+        localStorage.setItem('titan_col', colIndex);
+
+        // If English, reload to reset (default)
+        if(langCode === 'en') { location.reload(); return; } 
+        
+        if(!'https://docs.google.com/spreadsheets/d/e/2PACX-1vQW0mT2E0caO-gCnEZv9jSB2VnTu_1mvjx90AgPkJV2uDm__LkOwB4gqGadOylesu0N7VByL3AO6-4h/pub?output=csv') return; // LIGHTHOUSE FIX: Abort if no CSV provided
+        
+        try { 
+            const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQW0mT2E0caO-gCnEZv9jSB2VnTu_1mvjx90AgPkJV2uDm__LkOwB4gqGadOylesu0N7VByL3AO6-4h/pub?output=csv'); 
+            const txt = await res.text(); 
+            const lines = txt.split(/\r\n|\n/); 
+            
+            for(let i=1; i<lines.length; i++) { 
+                const row = parseCSVLine(lines[i]); 
+                // Ensure the row has enough columns for the selected language
+                if(row.length > colIndex) { 
+                    const el = document.getElementById(row[0]); 
+                    // Update text if element exists and translation is not empty
+                    if(el && row[colIndex]) el.innerText = row[colIndex]; 
+                } 
+            } 
+            
+            // Update HTML lang attribute for SEO
+            document.documentElement.lang = langCode;
+            
+        } catch(e) { console.log("Lang Error", e); } 
+    }
+
+    // Auto-load saved language on page refresh
+    window.addEventListener('load', () => {
+        const savedLang = localStorage.getItem('titan_lang');
+        const savedCol = localStorage.getItem('titan_col');
+        if(savedLang && savedLang !== 'en') {
+            switchLang(savedLang, parseInt(savedCol));
+        }
+    });
+    </script>
+    
+        
+    <div id="lead-popup">
+        <div class="close-popup" onclick="document.getElementById('lead-popup').style.display='none'">&times;</div>
+        <h3>Need a Weekend Plan?</h3><p>Message us on WhatsApp to get our latest group rates for Diani and Malindi.</p>
+        <a href="https://wa.me/254712799837?text=I want the offer" class="btn btn-accent" target="_blank" rel="noopener noreferrer"> Chat with Us</a>
+    </div>
+    <script defer>
+    setTimeout(() => { 
+        if(!localStorage.getItem('popupShown')) { document.getElementById('lead-popup').style.display = 'block'; localStorage.setItem('popupShown', 'true'); } 
+    }, 5000);
+    </script>
+    
+        
+    </main>
+    <script defer>window.addEventListener('scroll', () => { var r = document.querySelectorAll('.reveal'); for (var i = 0; i < r.length; i++) { if (r[i].getBoundingClientRect().top < window.innerHeight - 100) r[i].classList.add('active'); } }); window.dispatchEvent(new Event('scroll'));</script>
+    <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }</script>
+</body>
+</html>

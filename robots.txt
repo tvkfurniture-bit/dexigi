@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.dexigiexcursions.co.ke/sitemap.xml
